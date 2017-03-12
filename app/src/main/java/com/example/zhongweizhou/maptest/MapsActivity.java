@@ -1,11 +1,14 @@
 package com.example.zhongweizhou.maptest;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.ShareCompat;
 import android.support.v4.content.ContextCompat;
+import android.view.View;
 import android.widget.Toast;
 
 import com.facebook.CallbackManager;
@@ -40,6 +43,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.zoomTo(DEFAULT_ZOOM));
     }
 
+    public void goToSocial(View view){
+        Intent intent = new Intent(getApplicationContext(), SocialActivity.class);
+        startActivity(intent);
+    }
     private void enableMyLocation() {
         //resetZoom();
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
