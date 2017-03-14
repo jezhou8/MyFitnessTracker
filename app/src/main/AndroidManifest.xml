@@ -35,7 +35,7 @@
             android:value="@string/facebook_app_id" />
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".MapsActivity"
             android:label="Map"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
@@ -45,7 +45,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MapsActivity"
+            android:name=".LoginActivity"
             android:label="@string/title_activity_maps"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
